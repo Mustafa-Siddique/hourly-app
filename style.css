@@ -18,8 +18,9 @@ body{
 
 /*Main Screen displaying Stay Home*/
 .main-screen{
-    height: 1000px;
+    height: 150vh;
     width: 100%;
+    position: relative;
 }
 .main-screen img{
     height: 100%;
@@ -33,8 +34,8 @@ body{
     width: 150px;
     border-radius: 50%;
     position: absolute;
-    top: 83%;
-    left: 56%;
+    bottom: 32.5%;
+    right: 34%;
 }
 #circle:hover{
     transform: scale(1.1);
@@ -44,7 +45,6 @@ body{
     transform: scale(13);
     transition: 0.3s;
 }
-
 
 #download{
     font-weight: bold;
@@ -69,12 +69,9 @@ hr{
 
 /**/
 .banner{
-    height: 400px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 410px;
+    width: 80%;
+    position: relative;
 }
 .banner-heading{
     color: #EEE3C1;
@@ -82,24 +79,26 @@ hr{
     font-size: 40px;
     font-family: Helvetica;
     position: absolute;
-    transform: translateX(-50%) translateY(-180px);
+    left: 9%;
 }
-/*Bigger Text as an Image*/
-.banner-text{
-    width: 90%;
-    transform: translate(5%, 11%);
+/*hourly-title contains the SVG generated graphic*/
+.hourly-title{
+    position: absolute;
+    fill: #cc0000;
+}
+.hourly-title:hover{
+    animation-duration: 0.6s;
+    animation-name: hourly;
 }
 .banner-caption{
     display: flex;
-    justify-content: inherit;
-    width: 100%;
-    transform: translate(-10%, -40%);
+    position: absolute;
+    bottom: 0;
 }
 .banner-caption p{
     font-size: 20px;
-    width: 200px;
-    margin-right: 5px;
-    margin-left: 5px;
+    width: 19%;
+    margin: 0px 5px 0px 5px;
     color: #EEE3C1;
     font-weight: bold;
     font-family: Calibri;
@@ -108,26 +107,25 @@ hr{
 
 /*UI Screenshots*/
 .ui{
-    width: 100%;
-    height: 720px;
+    width: 80%;
+    height: auto;
+    position: relative;
 }
 #screenshots{
-    height: 100%;
-    width: 100%;
     display: flex;
-    justify-content: center;
 }
 #screenshots img{
-    margin: 10px 7px 10px 7px;
+    height: auto;
+    width: 100%;
+    margin: auto 7px auto 7px;
 }
 
 /*About App*/
 .about{
     height: 320px;
-    width: 90%;
+    width: 80%;
     font-family: Helvetica;
     display: flex;
-    justify-content: center;
 }
 .about-download{
     font-size: 30px;
@@ -152,7 +150,7 @@ hr{
 .description{
     float: right;
     letter-spacing: 0.5px;
-    width: 55%;
+    width: 65%;
     height: 100%;
     font-size: 34px;
     color: #EEE3C1;
@@ -193,8 +191,6 @@ hr{
     position: relative;
     width: 80%;
     height: 800px;
-    display: flex;
-    flex-direction: column;
 }
 #how{
     color: #cc0000;
@@ -235,7 +231,7 @@ hr{
 
 /*Feature 1*/
 .feature1{
-    height: 700px;
+    height: 710px;
     width: 80%;
     display: flex;
     position: relative;
@@ -243,18 +239,23 @@ hr{
 .iphone{
     position: absolute;
     left: 0;
+    width: 33%;
+    height: 100%;
+    top: 0;
 }
 .iphone img{
     margin: 0;
     padding: 0;
-    height: 700px;
-    width: 350px;
+    height: 100%;
+    width: 100%;
     position: absolute;
 }
 .iphone video{
     position: absolute;
-    top: 80px;
-    left: 23px;
+    height: 76.5%;
+    width: 87%;
+    left: 7%;
+    top: 11.5%;
 }
 .featureone{
     right: 0;
@@ -450,6 +451,24 @@ hr{
 }
 
 /*Keyframes*/
+@keyframes hourly{
+    0%{
+        fill: #cc0000;
+    }
+    25%{
+        fill: #FFFFFF;
+    }
+    50%{
+        fill: #ce8181;
+    }
+    75%{
+        fill: #ce4b4b;
+    }
+    100%{
+        fill: #cc0000;
+    }
+}
+
 @keyframes one{
     0%{
         right: 0;
@@ -525,16 +544,285 @@ hr{
     }
 }
 
-@media (max-width:900px){
+@media (max-width:1294px){
+    .about{
+        height: 290px;
+    }
+    .description{
+        font-size: 30px;
+    }
+    .about-download:hover{
+        font-size: 70px;
+    }
+    .how-to{
+        height: 750px;
+    }
+    #how{
+        font-size: 300px;
+    }
+    #to{
+        font-size: 290px;
+    }
+    #hourly{
+        font-size: 300px;
+        left: 0;
+    }
+    .feature1{
+        height: 650px;
+    }
+    .featureone p:nth-child(1){
+        font-size: 200px;
+    }
+    .featureone p:nth-child(2), .featureone p:nth-child(3){
+        font-size: 35px;
+    }
+}
+
+@media (max-width:1100px){
+    .main-screen{
+        height: 135vh;
+    }
     #circle{
-        height: 130px;
-        width: 130px;
+        bottom: 31%;
+        right: 31%;
+    }
+    .banner{
+        height: 360px;
+    }
+    .ui{
+        height: auto;
+    }
+    .about{
+        height: 275px;
+    }
+    .description{
+        font-size: 26px;
+    }
+    .about-download:hover{
+        font-size: 60px;
+    }
+    .how-to{
+        height: 685px;
+    }
+    #how{
+        font-size: 270px;
+    }
+    #to{
+        font-size: 260px;
+    }
+    #hourly{
+        font-size: 270px;
+    }
+    .feature1{
+        height: 600px;
+    }
+    .featureone p:nth-child(1){
+        font-size: 170px;
+    }
+    .featureone p:nth-child(2), .featureone p:nth-child(3){
+        margin-right: 0;
+        font-size: 31px;
+    }
+}
+
+@media (max-width:952px){
+    #circle{
+        height: 135px;
+        width: 135px;
+        bottom: 32%;
+        right: 29%;
+    }
+    .banner{
+        height: 320px;
+    }
+    .banner-heading{
+        font-size: 35px;
+    }
+    .banner-caption p{
+        font-size: 17px;
+    }
+    .about{
+        height: 250px;
+    }
+    .description{
+        font-size: 22px;
+    }
+    .about-download:hover{
+        font-size: 50px;
+    }
+    .how-to{
+        height: 610px;
+    }
+    #how{
+        font-size: 240px;
+    }
+    #to{
+        font-size: 230px;
+    }
+    #hourly{
+        font-size: 240px;
+    }
+    .feature1{
+        height: 500px;
+    }
+    .featureone p:nth-child(1){
+        font-size: 140px;
+    }
+    .featureone p:nth-child(2){
+        margin-right: 0;
+        font-size: 27px;
+        bottom: 70px;
+    }
+    .featureone p:nth-child(3){
+        margin-right: 0;
+        bottom: 0;
+        font-size: 27px;
     }
 }
 
 @media (max-width:800px){
+    .main-screen{
+        height: 115vh;
+    }
     #circle{
         height: 110px;
         width: 110px;
+    }
+    .banner{
+        height: 250px;
+    }
+    .banner-heading{
+        font-size: 28px;
+    }
+    .banner-caption p{
+        font-size: 13px;
+    }
+    .about{
+        height: 215px;
+    }
+    .description{
+        font-size: 20px;
+        word-spacing: 0;
+        letter-spacing: 0;
+    }
+    .about-download:hover{
+        font-size: 40px;
+    }
+    .how-to{
+        height: 540px;
+    }
+    #how{
+        font-size: 210px;
+    }
+    #to{
+        font-size: 200px;
+    }
+    #hourly{
+        font-size: 210px;
+    }
+    .feature1{
+        height: 450px;
+    }
+    .featureone p:nth-child(1){
+        font-size: 110px;
+    }
+    .featureone p:nth-child(2){
+        margin-right: 0;
+        font-size: 24px;
+        bottom: 80px;
+    }
+    .featureone p:nth-child(3){
+        margin-right: 0;
+        bottom: 0;
+        font-size: 24px;
+    }
+}
+
+@media (max-width:700px){
+    .about{
+        height: 195px;
+    }
+    .description{
+        font-size: 18px;
+    }
+    .about-download{
+        font-size: 25px;
+    }
+    .about-download:hover{
+        font-size: 33px;
+    }
+    .how-to{
+        height: 440px;
+    }
+    #how{
+        font-size: 170px;
+    }
+    #to{
+        font-size: 160px;
+    }
+    #hourly{
+        font-size: 170px;
+    }
+    .feature1{
+        height: 410px;
+    }
+    .featureone p:nth-child(1){
+        font-size: 80px;
+    }
+    .featureone p:nth-child(2){
+        margin-right: 0;
+        font-size: 20px;
+        bottom: 70px;
+    }
+    .featureone p:nth-child(3){
+        margin-right: 0;
+        bottom: 0;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:600px){
+    .main-screen{
+        height: 90vh;
+    }
+    #circle{
+        height: 90px;
+        width: 90px;
+        bottom: 33.5%;
+        right: 27.5%;
+    }
+    .banner{
+        height: 200px;
+    }
+    .banner-heading{
+        font-size: 23px;
+    }
+    .banner-caption p{
+        font-size: 10px;
+    }
+    .about{
+        height: auto;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .about-download{
+        font: 23px;
+        word-spacing: auto;
+    }
+    .about-download:hover{
+        font-size: 29px;
+    }
+    .how-to{
+        height: 320px;
+    }
+    #how{
+        font-size: 130px;
+    }
+    #to{
+        font-size: 120px;
+    }
+    #hourly{
+        font-size: 130px;
     }
 }
