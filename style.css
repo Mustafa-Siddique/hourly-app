@@ -165,8 +165,8 @@ hr{
 }
 .one img{
     position: absolute;
-    height: 700px;
-    width: 500px;
+    height: 100%;
+    width: 40%;
     right: 0;
     margin: 0;
     animation-name: one;
@@ -175,8 +175,8 @@ hr{
 }
 .h img{
     position: absolute;
-    height: 700px;
-    width: 600px;
+    height: 100%;
+    width: 60%;
     left: 0;
     margin: 0;
     animation-name: h-transition;
@@ -306,8 +306,10 @@ hr{
 }
 .featuretwo{
     display: flex;
-    width: 360px;
+    width: 50%;
+    height: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
 .featuretwo a{
     text-decoration: none;
@@ -327,11 +329,12 @@ hr{
     margin: 0;
 }
 .two-screenshots{
-    height: 700px;
+    width: 69%;
+    height: 100%;
     display: flex;
 }
 .two-screenshots img{
-    height: 700px;
+    height: 100%;
     margin: 5px;
 }
 
@@ -341,11 +344,12 @@ hr{
     width: 80%;
     font-family: Helvetica;
     font-weight: bold;
+    position: relative;
 }
 .featurethree{
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 55%;
 }
 .featurethree a{
     text-decoration: none;
@@ -385,7 +389,8 @@ hr{
 
 /*"Free" Caption*/
 .free-section{
-    height: 400px;
+    position: relative;
+    height: auto;
     width: 80%;
 }
 .free-section img{
@@ -435,7 +440,7 @@ hr{
     font-weight: bold;
     font-size: 40px;
     width: 80%;
-    height: 55px;
+    height: auto;
 }
 .footer p{
     margin: 0;
@@ -475,32 +480,32 @@ hr{
         bottom: 0;
         }
     15%{
-        height: 350px;
+        height: 50%;
         bottom: 0;
         right: 0;
         }
     30%{
-        height: 350px;
+        height: 50%;
         right: 65%;
         bottom: 0;
     }
     45%{
-        height: 700px;
+        height: 100%;
         right: 62%;
         bottom: 0;
     }
     60%{
-        height: 350px;
+        height: 50%;
         right: 62%;
         bottom: 50%;
     }
     85%{
-        height: 350px;
+        height: 50%;
         right: 0;
         bottom: 50%;
     }
     100%{
-        height: 700px;
+        height: 100%;
         right: 0%;
         bottom: 0;
     }
@@ -510,35 +515,35 @@ hr{
     0%{
         left: 0;
         top: 0;
-        height: 700px;
+        height: 100%;
     }
     15%{
-        height: 350px;
+        height: 50%;
         top: 0;
         left: 0;
     }
     30%{
-        height: 350px;
+        height: 50%;
         left: 45%;
         top: 0;
     }
     45%{
-        height: 700px;
+        height: 100%;
         left: 45%;
         top: 0;
     }
     60%{
-        height: 350px;
+        height: 50%;
         left: 45%;
         top: 50%;
     }
     85%{
-        height: 350px;
+        height: 50%;
         left: 0;
         top: 50%;
     }
     100%{
-        height: 700px;
+        height: 100%;
         left: 0%;
         top: 0;
     }
@@ -576,6 +581,18 @@ hr{
     .featureone p:nth-child(2), .featureone p:nth-child(3){
         font-size: 35px;
     }
+    .feature2{
+        height: 650px;
+    }
+    .featuretwo p:nth-child(1){
+        font-size: 200px;
+    }
+    .featuretwo p:nth-child(2){
+        font-size: 32px;
+    }
+    .featurethree p:nth-child(2){
+        font-size: 35px;
+    }
 }
 
 @media (max-width:1100px){
@@ -601,6 +618,9 @@ hr{
     .about-download:hover{
         font-size: 60px;
     }
+    .animation{
+        height: 600px;
+    }
     .how-to{
         height: 685px;
     }
@@ -622,6 +642,33 @@ hr{
     .featureone p:nth-child(2), .featureone p:nth-child(3){
         margin-right: 0;
         font-size: 31px;
+    }
+    .feature2{
+        height: 600px;
+    }
+    .featuretwo p:nth-child(1){
+        font-size: 190px;
+    }
+    .featuretwo p:nth-child(2){
+        font-size: 27px;
+    }
+    .featurethree p:nth-child(1){
+        font-size: 250px;
+    }
+    .featurethree p:nth-child(2){
+        font-size: 33px;
+    }
+    .design p:nth-child(1), .code p:nth-child(1), .text p:nth-child(1){
+        font-size: 32px;
+    }
+    .design p:nth-child(2), .code p:nth-child(2), .text p:nth-child(2){
+        font-size: 23px;
+    }
+    .footer{
+        font-size: 35px;
+    }
+    .footer a:hover{
+        letter-spacing: 12px;
     }
 }
 
@@ -678,6 +725,30 @@ hr{
         bottom: 0;
         font-size: 27px;
     }
+    .feature2{
+        height: 530px;
+    }
+    .featuretwo p:nth-child(1){
+        font-size: 160px;
+    }
+    .featuretwo p:nth-child(2){
+        font-size: 24px;
+    }
+    .featurethree p:nth-child(1){
+        font-size: 230px;
+    }
+    .featurethree p:nth-child(2){
+        font-size: 30px;
+    }
+    .credits{
+        height: 250px;
+    }
+    .design p:nth-child(1), .code p:nth-child(1), .text p:nth-child(1){
+        font-size: 29px;
+    }
+    .design p:nth-child(2), .code p:nth-child(2), .text p:nth-child(2){
+        font-size: 20px;
+    }
 }
 
 @media (max-width:800px){
@@ -708,6 +779,9 @@ hr{
     .about-download:hover{
         font-size: 40px;
     }
+    .animation{
+        height: 500px;
+    }
     .how-to{
         height: 540px;
     }
@@ -735,6 +809,45 @@ hr{
         margin-right: 0;
         bottom: 0;
         font-size: 24px;
+    }
+    .feature2{
+        height: 480px;
+    }
+    .featuretwo p:nth-child(1){
+        font-size: 130px;
+    }
+    .featuretwo p:nth-child(2){
+        font-size: 20px;
+    }
+    .feature3{
+        height: 850px;
+    }
+    .featurethree p:nth-child(1){
+        font-size: 200px;
+    }
+    .featurethree p:nth-child(2){
+        font-size: 27px;
+    }
+    .timeconsumed{
+        font-size: 15px;
+    }
+    .credits{
+        height: 200px;
+    }
+    .design p:nth-child(1), .code p:nth-child(1), .text p:nth-child(1){
+        font-size: 25px;
+    }
+    .design p:nth-child(1):hover, .code p:nth-child(1):hover, .text p:nth-child(1):hover{
+        transform: scaleY(5);
+    }
+    .design p:nth-child(2), .code p:nth-child(2), .text p:nth-child(2){
+        font-size: 17px;
+    }
+    .footer{
+        font-size: 29px;
+    }
+    .footer a:hover{
+        letter-spacing: 8px;
     }
 }
 
@@ -779,6 +892,24 @@ hr{
         bottom: 0;
         font-size: 20px;
     }
+    .feature2{
+        height: 400px;
+    }
+    .featuretwo p:nth-child(1){
+        font-size: 100px;
+    }
+    .featuretwo p:nth-child(2){
+        font-size: 16px;
+    }
+    .feature3{
+        height: 800px;
+    }
+    .featurethree p:nth-child(1){
+        font-size: 140px;
+    }
+    .featurethree p:nth-child(2){
+        font-size: 24px;
+    }
 }
 
 @media (max-width:600px){
@@ -813,6 +944,9 @@ hr{
     .about-download:hover{
         font-size: 29px;
     }
+    .animation{
+        height: 280px;
+    }
     .how-to{
         height: 320px;
     }
@@ -824,5 +958,11 @@ hr{
     }
     #hourly{
         font-size: 130px;
+    }
+    .footer{
+        font-size: 23px;
+    }
+    .footer a:hover{
+        letter-spacing: 5px;
     }
 }
